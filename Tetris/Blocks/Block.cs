@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Tetris
 {
@@ -35,7 +31,7 @@ namespace Tetris
 
         public void RotateCCW()
         {
-            if(rotationState == 0)
+            if (rotationState == 0)
                 rotationState = Tiles.Length - 1;
             else
                 rotationState--;
