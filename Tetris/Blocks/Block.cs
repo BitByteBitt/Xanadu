@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Tetris.Blocks
+namespace Tetris
 {
     public abstract class Block
     {
