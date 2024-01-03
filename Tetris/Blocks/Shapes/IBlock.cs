@@ -1,4 +1,4 @@
-﻿namespace Tetris
+﻿namespace Tetris.Blocks.Shapes
 {
     public class IBlock : Block
     {
