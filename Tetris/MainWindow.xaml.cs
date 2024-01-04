@@ -1,17 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Tetris
 {
@@ -41,7 +33,7 @@ namespace Tetris
             new BitmapImage(new Uri("Assets/Block-O.png", UriKind.Relative)),
             new BitmapImage(new Uri("Assets/Block-S.png", UriKind.Relative)),
             new BitmapImage(new Uri("Assets/Block-T.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Assets/Block-Z.png", UriKind.Relative)),
+            new BitmapImage(new Uri("Assets/Block-Z.png", UriKind.Relative))
         };
 
         private readonly Image[,] imageControls;
@@ -58,9 +50,9 @@ namespace Tetris
             Image[,] imageControls = new Image[_grid.Rows, _grid.Columns];
             int cellSize = 25;
 
-            for(int r = 0; r < _grid.Rows; r++)
+            for (int r = 0; r < _grid.Rows; r++)
             {
-                for(int c = 0; c < _grid.Columns; c++)
+                for (int c = 0; c < _grid.Columns; c++)
                 {
                     Image imageControl = new Image
                     {
@@ -80,9 +72,9 @@ namespace Tetris
 
         private void DrawGrid(GameGrid _grid)
         {
-            for(int r = 0; r < _grid.Rows; r++)
+            for (int r = 0; r < _grid.Rows; r++)
             {
-                for(int c = 0; c < _grid.Columns; c++)
+                for (int c = 0; c < _grid.Columns; c++)
                 {
                     int id = _grid[r, c];
                     imageControls[r, c].Source = tileImages[id];
